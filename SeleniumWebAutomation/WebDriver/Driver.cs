@@ -28,12 +28,7 @@ namespace SeleniumWebAutomation.WebDriver
         public static void DriverQuit()
         {
             driver.Quit();
-        }
-        
-        public static void GetAllCookies()
-        {
-            ReadOnlyCollection<Cookie> cookies = driver.Manage().Cookies.AllCookies;
-        }
+        }        
 
         public static void GoToUrl(string url)
         {
@@ -70,18 +65,7 @@ namespace SeleniumWebAutomation.WebDriver
         public static void NewTab()
         {
             driver.SwitchTo().Window(driver.WindowHandles.Last());
-        }
-        
-        public static void NewTab2()
-        {
-            driver.SwitchTo().DefaultContent();
-        }
-
-        public static void JavaScriptClick(IWebElement element)
-        {
-            IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
-            executor.ExecuteScript("arguments[0].click()", element);
-        }
+        }        
 
         public static void ElementIsVisible(By locator,int second)
         {
